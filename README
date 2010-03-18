@@ -1,0 +1,8 @@
+A project template for Arduino/AVR hacking with the following contents:
+
+- A simple C program (toggles the LED on Arduino Pin 13).
+- Makefile, including an UPLOAD command
+
+It assumes you have installed
+- avr-gcc,
+- avrdude.
