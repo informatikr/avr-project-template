@@ -1,5 +1,5 @@
-PRG            = main
-OBJ            = main.o
+
+### vvv EDIT BELOW vvv ###
 
 MCU_TARGET     = atmega1280
 ### other examples:
@@ -7,21 +7,23 @@ MCU_TARGET     = atmega1280
 # MCU_TARGET     = atmega1284p
 # MCU_TARGET     = attiny2313
 
+SERIAL_PORT     = /dev/tty.usbserial-A600aiI4
+CLK_FREQ        = 16000000L
+
+### ^^^ EDIT ABOVE ^^^ ###
+
+PRG            = main
+OBJ            = main.o
 
 ### AVRDUDE OPTIONS
-SERIAL_PORT  = /dev/tty.usbserial-A600aiI4
 DUDE_OPTIONS = -p $(MCU_TARGET) -P $(SERIAL_PORT) -c stk500v1 -b 57600 -F -u
 
-
 ### GCC OPTIONS
+CC             = avr-gcc
 OPTIMIZE       = -O2
-DEFS           = -DF_CPU=16000000L
+DEFS           = -DF_CPU=$(CLK_FREQ)
 LIBS           =
 
-
-# You should not have to change anything below here.
-
-CC             = avr-gcc
 
 # Override is only needed by avr-lib build system.
 
