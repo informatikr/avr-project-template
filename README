@@ -16,7 +16,7 @@ To run the example on your arduino follow these steps:
       Arduino board.
     - Set "SERIAL_PORT" to the filename of your USB/Serial adapter. If you
       are unsure about the name, look for it in the Arduino IDE under
-	  "Tools" -> "Serial Port".
-	- Set "CLK_FREQ" to the clock speed of your Arduino. At 16 MHz it is
-	  most probably correctly set, already.
+      "Tools" -> "Serial Port".
+    - Set "CLK_FREQ" to the clock speed of your Arduino. At 16 MHz it is
+      most probably correctly set, already.
 4. Run "make upload". The LED on Pin 13 should start to blink.
