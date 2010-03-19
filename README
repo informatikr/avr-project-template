@@ -1,16 +1,18 @@
 A project template for Arduino/AVR hacking with the following contents:
 
 - A simple C program (toggles the LED on Arduino Pin 13).
-- Makefile, including an UPLOAD command
+- Makefile, including an UPLOAD command. It is based on the one described
+  at http://www.nongnu.org/avr-libc/user-manual/group__demo__project.html.
 
-It assumes you have installed
-- avr-gcc,
-- avr-libc,
-- avrdude.
 
-To run the example on your arduino:
-1. Connect your Arduino via the USB-cable
-2. Modify the file "Makefile":
+To run the example on your arduino follow these steps:
+
+1. You need to have installed
+    - avr-gcc,
+    - avr-libc,
+    - avrdude.
+2. Connect your Arduino via the USB-cable
+3. Modify the file "Makefile":
     - Set "MCU_TARGET" to the particualar microcontroller on your
       Arduino board.
 	- Set "SERIAL_PORT" to the filename of your USB/Serial adapter. If you
@@ -18,4 +20,4 @@ To run the example on your arduino:
 	  "Tools" -> "Serial Port".
 	- Set "CLK_FREQ" to the clock speed of your Arduino. At 16 MHz it is
 	  most probably correctly set, already.
-3. Run "make upload". The LED on Pin 13 should start to blink.
+4. Run "make upload". The LED on Pin 13 should start to blink.

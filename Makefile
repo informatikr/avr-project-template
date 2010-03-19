@@ -16,7 +16,7 @@ PRG            = main
 OBJ            = main.o
 
 ### AVRDUDE OPTIONS
-DUDE_OPTIONS = -p $(MCU_TARGET) -P $(SERIAL_PORT) -c stk500v1 -b 57600 -F -u
+DUDE_OPTIONS = -p $(MCU_TARGET) -P $(SERIAL_PORT) -c stk500v1 -b 57600 -F
 
 ### GCC OPTIONS
 CC             = avr-gcc
